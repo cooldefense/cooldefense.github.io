@@ -295,7 +295,7 @@ function Repeat(){
 	//move enemies
 	for(var i=0;i<document.getElementsByClassName("enemy").length;i++){
 		var currentEnemy = document.getElementsByClassName("enemy")[i];
-		currentEnemy.style.left=parseFloat(currentEnemy.style.left, 10)-(0.5*(wave/10))//fix it gets smaller*gameSpeed);
+		currentEnemy.style.left=parseFloat(currentEnemy.style.left, 10)-(0.5+(0.5*wave/10))*gameSpeed);
 		if(parseFloat(currentEnemy.style.left, 10) < 100){
 			currentEnemy.outerHTML = "";
 		}
@@ -311,7 +311,7 @@ function Repeat(){
 				if(parseFloat(currentBullet.style.top, 10)-25 == parseFloat(currentEnemy.style.top, 10)){
 					currentEnemy.innerHTML = parseFloat(currentEnemy.innerHTML)-parseFloat(currentBullet.innerHTML);
 					currentBullet.outerHTML = "";
-					if(parseFloat(currentEnemy.innerHTML) == 0){
+					if(parseFloat(currentEnemy.innerHTML) <= 0){
 						currentEnemy.outerHTML = "";
 					}
 				}
@@ -324,7 +324,7 @@ function Repeat(){
 				if(parseFloat(currentTower.style.top, 10) == parseFloat(currentEnemy.style.top, 10)){
 					currentTower.innerHTML = parseFloat(currentTower.innerHTML)-25;
 					currentEnemy.style.left = "-100px";
-					if(parseFloat(currentTower.innerHTML) == 0){
+					if(parseFloat(currentTower.innerHTML) <= 0){
 						currentTower.className = "none";
 						currentTower.id = "";
 						currentTower.innerHTML = "";
