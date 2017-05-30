@@ -1,0 +1,205 @@
+* {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+    overflow:hidden;
+	user-select: none;
+	background-image: url('background.png');
+}
+
+.none {
+	position:fixed;
+	background-color:rgba(255,255,255,0.3);
+	width:100px;
+	height:100px;
+	border:2px solid black;
+}
+
+.shooter {
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	position:fixed;
+	background-image: url('mike.png');
+	background-size: 100% 100%;
+	background-color: green;
+	width:100px;
+	height:100px;
+	border:2px solid black;
+	font-size:20pt;
+	color:white;
+}
+
+.moneyMaker {
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	position:fixed;
+	background-image: url('mark.jpg');
+	background-size: 100% 100%;
+	background-color: green;
+	width:100px;
+	height:100px;
+	border:2px solid black;
+	font-size:20pt;
+	color:white;
+}
+
+.rapidShooter {
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	position:fixed;
+	background-image: url('bolt.jpg');
+	background-size: 100% 100%;
+	background-color: green;
+	width:100px;
+	height:100px;
+	border:2px solid black;
+	font-size:20pt;
+	color:white;
+}
+
+.bullet  {
+	position:fixed;
+	width:25px;
+	height:25px;
+	border-radius: 100%;
+	background-color: yellow;
+	border:2px solid black;
+}
+
+.enemy {
+	position:fixed;
+	background-image: url('minion.png');
+	background-size: 100% 100%;
+	width:100px;
+	height:100px;
+	color:white;
+	font-size:20pt;
+	color:white;
+}
+
+.towerSelect {
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	position:relative;
+	width:200px;
+	height:50px;
+	border: 2px solid white	;
+	top:650px;
+	margin-right:25px;
+	left:-165px;
+	float:left;
+	background-color:rgba(0,0,0,0);
+	color:white;
+	transition:0.1s;
+}
+
+.towerSelect:hover {
+	height: 55px;
+	cursor: pointer;
+}
+
+.bar {
+	background-color: red;
+	z-index:-1;
+	height:100%;
+	left:0;
+	float:left;
+	position:absolute;
+}
+
+.stat {
+	position:relative;
+	font-size:30pt;
+	color:white;
+	margin-right: 20px;
+	float:left;
+	height:10px;
+	top:15px;
+}
+
+#wave {
+	pointer-events:none;
+	position:fixed;
+	font-size:25pt;
+	color:white;
+	top:27px;
+	text-align:center;
+	width:850px;
+}
+
+#moneyGain {
+	font-size:20pt;
+	top:23px;
+}
+
+.description {
+	pointer-events:none;
+	position:fixed;
+	font-size:15pt;
+	color:white;
+	background-color:rgba(0,0,0,0.5);
+	width:0px;
+	height:0px;
+	padding:10px;
+	border: 1px solid white;
+	opacity:0;
+	transition:width 0.5s, opacity 0.5s, height 0.5s;
+	overflow: hidden;
+	text-overflow: clip;
+}
+
+.upgradeTitle, .upgrade {
+	position:relative;
+	color:white;
+	height:25px;
+	width:300px;
+	top:250px;
+	left:950px;
+	transition:0.2s;
+	margin-bottom:20px;
+	opacity:0;
+}
+
+.upgradeTitle {
+	top:150px;
+	font-weight: bold;
+	font-size:25pt;
+}
+
+.upgrade {
+	font-size:15pt;
+	border:2px solid white;
+	padding:10px;
+}
+
+.upgrade:hover {
+	background-color:rgba(255,255,255,1);
+	color:black;
+	cursor:pointer;
+}
+
+.button {
+	left:-350px;
+	top:10px;
+	position:relative;
+	width:125px;
+	height:25px;
+	font-size:15pt;
+	border:2px solid white;
+	padding:10px;
+	margin-right:20px;
+	color:white;
+	float:left;
+	transition:0.2s;
+}
+
+.button:hover {
+	background-color:rgba(255,255,255,0.3);
+	cursor:pointer;
+}

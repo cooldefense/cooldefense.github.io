@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<link id="pagestyle" rel="stylesheet" type="text/css" href="style.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<title>tower defense</title>
+		<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' name='viewport'/>
+	</head>
+	<body>
+		<div id="container">
+			<div id="bullets"></div>
+			<div id="enemies"></div>
+			<div id="tiles"></div>
+			<div class="stat">$<span id="moneyAmount"></span></div>
+			<div id="moneyGain" class="stat">$<span id="moneyGainAmount"></span> every 5 sec</div>
+			<div id="wave"></div>
+			
+			<div id="moneyMaker" class="towerSelect" onclick="selectedTower='moneyMaker'"><div id="moneyMakerBar" class="bar" style="width:0%"></div>Money Maker ($10)</div>
+			<div id="moneyMakerDescription" class="description">Generates $2 every 5 seconds</div>
+			
+			<div id="shooter" class="towerSelect" onclick="selectedTower='shooter'"><div id="shooterBar" class="bar" style="width:0%"></div>Shooter ($20)</div>
+			<div id="shooterDescription" class="description">Shoots every 2 seconds, dealing 25 damage</div>
+			
+			<div id="rapidShooter" class="towerSelect" onclick="selectedTower='rapidShooter'"><div id="rapidShooterBar" class="bar" style="width:0%"></div>Rapid Shooter ($40)</div>
+			<div id="rapidShooterDescription" class="description">Shoots every 750 ms, dealing 10 damage</div>
+			
+			<div class="button" onclick="SpawnWave()">Next wave</div>
+			<div class="button" onclick="SpeedUp()">Fast forward</div>
+			
+			<div id="upgrade" class="upgradeTitle"></div>
+			<div id="upgrade1" class="upgrade" onclick="BuyUpgrade(1)"></div>
+			<div id="upgrade2" class="upgrade" onclick="BuyUpgrade(2)"></div>
+			<!--<div style="font-size:20pt;color:white;width:400px;position:relative;float:left;top:90px"><span style="font-size:40pt;font-weight:bold">GOAL</span><br>protect space from the minions and stop them from reaching earth<br><br><span style="font-size:40pt;font-weight:bold">CONTROLS</span><br>Click on a tile to place a tower, select which tower to place at the bottom</div>
+-->		</div>
+	</body>
+	<script type="text/javascript" src="main.js"></script>
+</html>
