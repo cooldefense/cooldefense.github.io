@@ -295,7 +295,7 @@ function Repeat(){
 	//move enemies
 	for(var i=0;i<document.getElementsByClassName("enemy").length;i++){
 		var currentEnemy = document.getElementsByClassName("enemy")[i];
-		currentEnemy.style.left=parseFloat(currentEnemy.style.left, 10)-(0.5+(0.5*wave/10))*gameSpeed);
+		currentEnemy.style.left=parseFloat(currentEnemy.style.left, 10)-(0.5+(0.5*wave/10)*gameSpeed);
 		if(parseFloat(currentEnemy.style.left, 10) < 100){
 			currentEnemy.outerHTML = "";
 		}
